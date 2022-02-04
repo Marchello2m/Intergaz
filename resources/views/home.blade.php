@@ -20,6 +20,7 @@
                                     <th class="p-3">client email</th>
 
                                     <th class="p-3">Created_at</th>
+                                    <th class="p-3">Title</th>
 
 
                                 </tr>
@@ -28,11 +29,13 @@
                                 <tbody>
                                 @foreach($data as $item)
                                     <tr >
-                                        <td class="p-3">{{$item->id}}</td>
+                                        <td class="p-3">{{$item->client_id}}</td>
                                         <td class="p-3 ">{{$item->name}}</td>
                                         <td class="p-3 ">{{$item->phone}}  </td>
                                         <td class="p-3 ">{{$item->email}}  </td>
                                         <td class="p-3">{{$item->created_at}}</td>
+                                        <td class="p-3">{{$item->title}}</td>
+
 
 
                                               <td><button>Parādīt addresi</button></td>
@@ -40,6 +43,7 @@
                                     </tr>
 
                                 @endforeach
+
                                 </tbody>
 
                             </table>

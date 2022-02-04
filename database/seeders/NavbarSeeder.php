@@ -15,30 +15,26 @@ class NavbarSeeder extends Seeder
     public function run()
     {
         $links = [
-            [
-                'name' => 'Client list',
-                'route' => 'home',
-                'ordering' => 1,
-            ],
+
             [
                 'name' => 'Client delivery',
                 'route' => 'client-delivery',
-                'ordering' => 2,
+                'ordering' => 1,
             ],
             [
                 'name' => 'Report "Order types"',
                 'route' => 'order-types',
-                'ordering' => 3,
+                'ordering' => 2,
             ],
             [
                 'name' => 'Report "Last delivery"',
                 'route' => 'last-delivery',
-                'ordering' => 4,
+                'ordering' => 3,
             ],
             [
                 'name' => 'Report "Inactive clients"',
                 'route' => 'inactive-clients',
-                'ordering' => 5,
+                'ordering' => 4,
             ],
 
         ];

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddressesController;
 use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;

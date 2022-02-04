@@ -16,8 +16,10 @@ class CreateAddressesTable extends Migration
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->integer('clientsID');
-
+            $table->unsignedBigInteger('client_id');
+            $table->foreign('client_id')
+                ->references('id')
+                ->on('clients');
             $table->timestamps();
         });
     }
