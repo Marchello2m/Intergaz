@@ -14,4 +14,20 @@ class Clients extends Model
     {
         return $this->hasMany(Addresses::class);
     }
+    public function deliveries()
+    {
+        return $this->hasMany(Deliveries::class);
+    }
+    public function deliveryLines()
+    {
+        return $this->hasMany(DeliveryLines::class);
+    }
+    public function routes()
+    {
+        return $this->hasMany(Routes::class);
+    }
+    public function orderType()
+    {
+        return $this->hasMany(OrderTypes::class);
+    }
 }

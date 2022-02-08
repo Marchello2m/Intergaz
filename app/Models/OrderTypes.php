@@ -5,11 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Navbar extends Model
+class OrderTypes extends Model
 {
     use HasFactory;
+    protected $table = 'clients';
+    public function client()
+    {
+        return $this->belongsTo('Client');
+    }
 
-    protected $fillable = [
-        'name', 'route', 'ordering'
-    ];
 }

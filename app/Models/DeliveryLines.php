@@ -9,7 +9,7 @@ class DeliveryLines extends Model
 {
     use HasFactory;
 
-    public static function getCount()
+    public static function getStatus()
     {
         return Clients::query()
             ->selectRaw("count(*) as all_statuses")
@@ -20,5 +20,9 @@ class DeliveryLines extends Model
             ->first()
             ->toArray();
 
+    }
+    public function client()
+    {
+        return $this->belongsTo('Client')->select(['*']);
     }
 }
