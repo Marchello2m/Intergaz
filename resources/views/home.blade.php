@@ -47,7 +47,7 @@
             <div class="col">
 
 
-
+<p>Jāpieliek lai adresses radas shini DIV</p>
 
 
 

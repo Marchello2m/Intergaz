@@ -8,6 +8,8 @@
                     <div class="card-header">Order types</div>
                     <div class="card-body">
                         <p>You are in OrderTypes</p>
+
+                        <p>Jāsakarto pec piegādes tipiem</p>
                         <table class="table table-hover">
                             <thead>
                             <tr>

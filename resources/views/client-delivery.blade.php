@@ -25,6 +25,7 @@
 
                             </tr>
                         </div>
+                        <p>Jaizdabon no db</p>
                         <div class=" bg-light p-3 border">
                             <table class="table caption-top">
 

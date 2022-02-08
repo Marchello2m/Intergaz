@@ -21,22 +21,19 @@ class DeliveriesController extends Controller
     }
 
 
-
-    public function showClient()
+    public function showAll()
     {
         $data = DB::table('clients')
-            ->join('addresses', 'addresses.id', '=', 'clients.id')
-            ->join('delivery_lines', 'delivery_lines.id', '=', 'clients.id')
-            ->join('routes', 'routes.id', '=', 'clients.id')
+            ->join('addresses', 'clients.id', '=', 'addresses.client_id')
+            ->join('delivery_lines', 'clients.id', '=', 'delivery_lines.client_id')
+            ->join('routes', 'clients.id', '=', 'routes.client_id')
             ->get();
-
-        // ->join('addresses', 'clients.id', '=', 'addresses.client_id')
-        //  ->join('delivery_lines', 'clients.id', '=', 'delivery_lines.client_id')
-        //  ->join('routes', 'clients.id', '=', 'routes.client_id')
-
-        return view('client-delivery', compact('data'));
-
+        return view('last-delivery', compact('data'));
     }
 
+    public function summPrice()
+    {
+
+    }
 
 }

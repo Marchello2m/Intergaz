@@ -3,6 +3,7 @@
 use App\Http\Controllers\AddressesController;
 use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\DeliveriesController;
+use App\Http\Controllers\DeliveryLinesController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderTypesController;
 use Illuminate\Support\Facades\Route;
@@ -49,7 +50,8 @@ Route::get('/client/{id}',[DeliveriesController::class,'getOne']);
 
 
 
-//Route::get('/client/{id}',[DeliveriesController::class,'showClient']);
+Route::get('/last-delivery',[DeliveriesController::class,'showAll']);
+Route::get('/inactive-clients',[DeliveryLinesController::class,'noLiquid']);
 
 
 
