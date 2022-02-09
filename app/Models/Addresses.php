@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Addresses extends Model
 {
     use HasFactory;
+    public $fillable =[
+        'title',
+        'client_id',
+        'created_at',
+    ];
 
 
     public function __construct(string $title)

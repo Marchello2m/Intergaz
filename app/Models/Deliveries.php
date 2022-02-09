@@ -8,6 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Deliveries extends Model
 {
     use HasFactory;
+    public $fillable=[
+        'routeId',
+        'addressId',
+        'type',
+        'status',
+        'client_id',
+        'created_at',
+    ];
 
     public function client()
     {

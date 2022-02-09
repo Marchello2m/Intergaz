@@ -31,8 +31,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-       ClientsFactory::create(10);
-
+        $this->call([
+            ClientsSeeder::class,
+            AddressesSeeder::class,
+            DeliveriesSeeder::class,
+            DeliveryLinesSeeder::class,
+            RoutesSeeder::class
+        ]);
 
 
 

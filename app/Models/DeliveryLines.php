@@ -9,6 +9,15 @@ class DeliveryLines extends Model
 {
     use HasFactory;
 
+    public $fillable=[
+        'deliveryId',
+        'item',
+        'price',
+        'quantity',
+        'client_id',
+        'created_at',
+    ];
+
     public static function getStatus()
     {
         return Clients::query()

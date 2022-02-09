@@ -8,7 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Clients extends Model
 {
     use HasFactory;
-    protected $table = 'addresses';
+
+    public $fillable = [
+        'client_id'=> '',
+        'name'=>'',
+        'phone'=> '',
+        'email' => '',
+        'created_at' =>'',
+    ];
+    protected $table = 'clients';
 
     public function addreses()
     {
