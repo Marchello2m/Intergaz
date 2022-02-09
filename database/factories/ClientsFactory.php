@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ClientsFactory extends Factory
 {
-    protected $model = Clients::class;
+
     /**
      * Define the model's default state.
      *
@@ -18,7 +18,7 @@ class ClientsFactory extends Factory
     {
         return [
 
-            'client_id'=> rand(1,20),
+            'client_id'=> rand(1,100),
             'name'=> $this->faker->firstName,
             'phone'=> $this->faker->phoneNumber,
             'email' => $this->faker->email,

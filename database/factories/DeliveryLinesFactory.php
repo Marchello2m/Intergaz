@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class Delivery_linesFactory extends Factory
+class DeliveryLinesFactory extends Factory
 {
     /**
      * Define the model's default state.

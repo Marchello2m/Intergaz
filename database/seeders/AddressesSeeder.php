@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Addresses;
 use Carbon\Carbon;
+use Database\Factories\ClientsFactory;
 use Illuminate\Database\Seeder;
 
 class AddressesSeeder extends Seeder
@@ -16,10 +17,6 @@ class AddressesSeeder extends Seeder
      */
     public function run()
     {
-       Addresses::create([
-           'title'=> $this->faker->address(),
-           'client_id'=> rand(4,20),
-           'created_at'=> Carbon::now(),
-       ]);
+        Addresses::factory(10)->create();
     }
 }

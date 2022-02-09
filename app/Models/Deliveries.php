@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Deliveries extends Model
 {
+    protected $table = 'deliveries';
+
     use HasFactory;
     public $fillable=[
         'routeId',

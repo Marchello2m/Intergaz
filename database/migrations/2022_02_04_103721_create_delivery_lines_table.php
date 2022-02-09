@@ -21,10 +21,7 @@ class CreateDeliveryLinesTable extends Migration
             $table->float('quantity');
             $table->integer('status');
 
-            $table->unsignedBigInteger('client_id');
-            $table->foreign('client_id')
-                ->references('id')
-                ->on('clients');
+            $table->foreignId('client_id')->constrained();
 
             $table->timestamps();
         });

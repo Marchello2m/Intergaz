@@ -16,7 +16,7 @@ class AddressesFactory extends Factory
     {
         return [
             'title'=> $this->faker->address(),
-            'client_id'=> rand(4,20),
+            'client_id'=> rand(1,100),
             'created_at'=> Carbon::now(),
         ];
     }

@@ -10,6 +10,7 @@
                     <thead>
                     <tr>
                         <th class="p-3">client_id</th>
+                        <th class="p-3">id</th>
                         <th class="p-3">client Name</th>
                         <th class="p-3">client address</th>
 
@@ -20,6 +21,7 @@
                     @foreach($data as $item)
                         <tr>
                             <td class=" p-3" >{{$item->client_id}}</td>
+                            <td class=" p-3" >{{$item->id}}</td>
                             <td class="p-3 ">{{$item->name}}</td>
                             <td class="p-3 ">{{$item->title}}</td>
                             <td>

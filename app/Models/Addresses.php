@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Addresses extends Model
 {
     use HasFactory;
+    protected $table = 'addresses';
     public $fillable =[
         'title',
         'client_id',
@@ -15,15 +16,9 @@ class Addresses extends Model
     ];
 
 
-    public function __construct(string $title)
-    {
-      $this->title=$title;
-    }
 
-    public function getTitle(): string
-    {
-        return $this->title;
-    }
+
+
 
     public function client()
     {

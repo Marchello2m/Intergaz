@@ -20,11 +20,8 @@ class CreateRoutesTable extends Migration
             $table->string('status');
             $table->string('carNumber');
             $table->string('driverName');
-            $table->unsignedBigInteger('client_id');
-            $table->foreign('client_id')
-                ->references('id')
-                ->on('clients');
 
+            $table->foreignId('client_id')->constrained();
             $table->timestamps();
         });
     }
