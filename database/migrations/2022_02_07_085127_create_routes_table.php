@@ -18,6 +18,7 @@ class CreateRoutesTable extends Migration
             $table->bigInteger('routes_id');
             $table->date('date');
             $table->string('status');
+            $table->string('carNumber');
             $table->string('driverName');
             $table->unsignedBigInteger('client_id');
             $table->foreign('client_id')

@@ -2,8 +2,24 @@
 
 namespace Database\Seeders;
 
-use App\Models\Navbar;
+
+
+use App\Http\Controllers\AddressesController;
+use App\Models\Addresses;
+use App\Models\Clients;
+use Carbon\Carbon;
+
+
+use Database\Factories\ClientsFactory;
+use Database\Factories\DeliveriesFactory;
+use Database\Factories\Delivery_linesFactory;
+use Database\Factories\RoutesFactory;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+use Faker\Generator as Faker;
+
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,27 +30,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $links = [
 
-            [
-                'name' => 'Atskaite "Pasūtījumu tipi"',
-                'route' => 'order-types',
-                'ordering' => 2,
-            ],
-            [
-                'name' => 'Atskaite "Pēdējas piegādes"',
-                'route' => 'last-delivery',
-                'ordering' => 3,
-            ],
-            [
-                'name' => 'Atskaite "Neaktīvie klienti"',
-                'route' => 'inactive-clients',
-                'ordering' => 4,
-            ],
+       ClientsFactory::create(10);
 
-        ];
-        foreach ($links as $key => $navbar) {
-            Navbar::create($navbar);
-        }
+
+
+
+
     }
 }

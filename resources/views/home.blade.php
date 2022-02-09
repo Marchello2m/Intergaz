@@ -43,18 +43,14 @@
 
 
 
-
             <div class="col">
-
-
-<p>Jāpieliek lai adresses radas shini DIV</p>
 
 
 
 
                 <h1>INfo</h1>
                 <h2>Addresses:</h2>
-                <ul >
+                <ul>
 
                     <p id = "itemsId" ></p>
                  <p id = "itemsTitle" ></p>
@@ -75,11 +71,7 @@
     <script type="text/javascript">
 
         function GFG_click(clicked) {
-
                 document.getElementById("itemsId").innerHTML = "ID = "+clicked;
-                document.getElementById("itemsTitle").innerHTML = {{$item->title}};
-
-
         }
 
     </script>
