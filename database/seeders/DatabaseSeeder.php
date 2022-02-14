@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        Clients::factory(5)->create([
+        Clients::factory(10)->create([
 
         ])->each(function(Clients $clients){
             Addresses::factory(10)->create([

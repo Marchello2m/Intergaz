@@ -27,9 +27,13 @@
                                     <th scope="row">1</th>
                                     <td>{{$item->name}}</td>
                                     <td>{{$item->title}}</td>
-                                    <td>{{$item->status}}</td>
+                                    @if($item->type=='1')
+                                    <td>Škidrā prece</td>
 
 
+                                    @else
+                                        <td>Cietā prece</td>
+                                      @endif
                                 </tr>
                             @endforeach
                         </table>

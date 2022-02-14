@@ -17,12 +17,10 @@ class CreateDeliveryLinesTable extends Migration
             $table->id();
             $table->integer('deliveryId');
             $table->string('item');
-            $table->float('price');
-            $table->float('quantity');
-            $table->integer('status');
-
-            $table->foreignId('client_id')->constrained();
-
+            $table->integer('price');
+            $table->integer('quantity');
+            $table->unsignedBigInteger('client_id');
+            $table->foreign('client_id')->references('id')->on('clients');
             $table->timestamps();
         });
     }

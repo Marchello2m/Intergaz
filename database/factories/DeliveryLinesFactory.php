@@ -19,7 +19,7 @@ class DeliveryLinesFactory extends Factory
             'item'=> $this->faker->domainWord(),
             'price'=> $this->faker->randomFloat(),
             'quantity' => rand(1,1000),
-            'client_id'=> rand(1,10),
+
             'created_at'=> Carbon::now(),
         ];
     }

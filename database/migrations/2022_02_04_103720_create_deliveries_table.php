@@ -20,7 +20,8 @@ class CreateDeliveriesTable extends Migration
             $table->integer('type');
             $table->integer('status');
 
-            $table->foreignId('client_id')->constrained();
+            $table->unsignedBigInteger('client_id');
+            $table->foreign('client_id')->references('id')->on('clients');
             $table->timestamps();
         });
     }

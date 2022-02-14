@@ -17,7 +17,10 @@ class CreateAddressesTable extends Migration
             $table->id();
             $table->string('title');
 
-            $table->foreignId('client_id')->constrained();
+            $table->unsignedBigInteger('client_id');
+            $table->foreign('client_id')->references('id')->on('clients');
+
+
 
 
             $table->timestamps();

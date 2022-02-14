@@ -8,24 +8,22 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Klientu piegādes</div>
+                    <div class="card-header"><h3>Klientu piegādes</h3></div>
                     <div class="card-body">
-                        <h2>{{$data->name}}</h2>
+                        <h2><strong> {{ $data->name }}</strong></h2>
 
                         <div class=" bg-light p-3 border">
                             <tr>
 
-
-                                <li class="p-2"> Vārds: {{$data->name}}</li>
-                                <li class="p-2"> Telefona numburs: {{$data->phone}}</li>
-                                <li class="p-2"> E-pasts: {{$data->email}}</li>
-                                <li class="p-2"> ID: {{$data->client_id}}</li>
-
+                                <li class="p-2"> Vārds: {{ $data->name }} </li>
+                                <li class="p-2"> Telefona numburs: {{ $data->phone }} </li>
+                                <li class="p-2"> E-pasts: {{ $data->email }} </li>
+                                <li class="p-2"> ID: {{ $data->id }} </li>
 
 
                             </tr>
                         </div>
-                        <p>Jaizdabon no db</p>
+
                         <div class=" bg-light p-3 border">
                             <table class="table caption-top">
 
@@ -42,45 +40,45 @@
                                 <tbody>
 
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+                                                   <th scope="row">{{$addresse->client_id}}</th>
+                                                        <td>{{$addresse->title}}</td>
+
+                                                        <td>{{$routes->date}}</td>
+                                                        <td>{{$price->price}}</td>
+
+                                                        @if($routes->status=='1')
+                                                            <td>Izveidots</td>
+                                                        @elseif($routes->status=='2')
+                                                            <td>Ieplānots</td>
+                                                        @else
+                                                            <td>Slēgts</td>
+                                                        @endif
+
                                 </tr>
 
                                 </tbody>
                             </table>
 
 
-
-
-
-
-
-
-
-
-
                         </div>
 
 
-
-                        <table >
+                        <table>
 
                             <tbody>
-                  {{-- }}         @foreach($data as $item)
-                                <tr>
+                            {{-- }}         @foreach($data as $item)
+                                          <tr>
 
 
-                                       <td class="p-3 ">{{$item->title}}</td>
-                                    <td class="p-3 ">{{$item->name}}</td>
-                                    <td class="p-3 ">{{$item->date}}</td>
-                                    <td class="p-3 ">{{$item->price}}</td>
-                                    <td class="p-3 ">{{$item->status}}</td>
+                                                 <td class="p-3 ">{{$item->title}}</td>
+                                              <td class="p-3 ">{{$item->name}}</td>
+                                              <td class="p-3 ">{{$item->date}}</td>
+                                              <td class="p-3 ">{{$item->price}}</td>
+                                              <td class="p-3 ">{{$item->status}}</td>
 
-                                </tr>
-                            @endforeach
---}}
+                                          </tr>
+                                      @endforeach
+          --}}
                             </tbody>
 
                         </table>

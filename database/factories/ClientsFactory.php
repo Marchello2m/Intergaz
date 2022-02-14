@@ -18,7 +18,7 @@ class ClientsFactory extends Factory
     {
         return [
 
-            'client_id'=> rand(1,100),
+
             'name'=> $this->faker->firstName,
             'phone'=> $this->faker->phoneNumber,
             'email' => $this->faker->email,

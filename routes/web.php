@@ -50,6 +50,7 @@ Route::get('/client/{id}',[DeliveriesController::class,'getOne']);
 
 
 
+
 Route::get('/last-delivery',[DeliveriesController::class,'showAll']);
 Route::get('/inactive-clients',[DeliveryLinesController::class,'noLiquid']);
 

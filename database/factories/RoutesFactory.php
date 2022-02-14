@@ -20,7 +20,7 @@ class RoutesFactory extends Factory
             'carNumber' => rand(1,10),
             'status'=> rand(1,3),
             'driverName' => $this->faker->firstName(),
-            'client_id' => rand(1,10),
+
 
             'created_at'=> Carbon::now(),
         ];

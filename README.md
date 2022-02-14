@@ -1,6 +1,21 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
+## About App
 
+Laravel based app, without any Inputs. It uses only Factory and Seeds to fill the
+Database and to show data
 
-## About Laravel
+## Getting Started
+
+To start using the APP download all the package contents and open the project in your local repository.
+
+Create your own .env file based on the .env.example file.
+
+Run:
+---
+
+php artisan migrate
+
+php artisan db:seed
+
+php artisan serv
 

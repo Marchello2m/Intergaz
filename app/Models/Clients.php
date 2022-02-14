@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use http\Client;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,7 +11,7 @@ class Clients extends Model
     use HasFactory;
 
     public $fillable = [
-        'client_id'=> '',
+
         'name'=>'',
         'phone'=> '',
         'email' => '',
@@ -18,13 +19,18 @@ class Clients extends Model
     ];
     protected $table = 'clients';
 
-    public function addreses()
+
+    public function dbList()
     {
-        return $this->hasMany(Addresses::class);
+        return $this->hasManyThrough(Clients::class,Addresses::class, Deliveries::class, DeliveryLines::class,Routes::class);
     }
     public function deliveries()
     {
         return $this->hasMany(Deliveries::class);
+    }
+    public function addresses()
+    {
+        return $this->hasMany(Addresses::class);
     }
     public function deliveryLines()
     {

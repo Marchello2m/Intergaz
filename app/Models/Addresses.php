@@ -22,7 +22,7 @@ class Addresses extends Model
 
     public function client()
     {
-        return $this->belongsTo('Client')->select(['id','title']);
+        return $this->belongsTo('Client');
     }
 
 }

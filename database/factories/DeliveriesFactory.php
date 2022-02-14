@@ -19,7 +19,6 @@ class DeliveriesFactory extends Factory
             'addressId'=> rand(4,99),
             'type'=> rand(1,2),
             'status' => rand(1,3),
-            'client_id'=> rand(1,10),
             'created_at'=> Carbon::now(),
         ];
     }
