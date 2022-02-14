@@ -11,16 +11,7 @@ use Illuminate\Support\Facades\DB;
 class DeliveriesController extends Controller
 {
 
-    public function getOne1($id)
-    {
-       $data = DB::table('clients')
-            ->find($id);
-
-
-
-        return view('client-delivery', compact('data'));
-
-    }
+ 
 
 
     public function getOne($id)
